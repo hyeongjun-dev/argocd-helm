@@ -61,7 +61,7 @@ ingress:
     - host: k8s-dev-api.3ridge.io
       paths:
         - path: /
-          pathType: ImplementationSpecific
+          pathType: Prefix
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
