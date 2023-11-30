@@ -13,7 +13,7 @@ spec:
   source:
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: HEAD
-    path: wordpress
+    path: charts/wordpress
 
   # Destination cluster and namespace to deploy the application
   destination:
