@@ -1,0 +1,25 @@
+apiVersion: v2
+kind: Application
+metadata:
+  name: wordpress
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  # The project the application belongs to.
+  project: default
+  
+  # Source of the application manifests
+  source:
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: HEAD
+    path: wordpress
+
+  # Destination cluster and namespace to deploy the application
+  destination:
+    server: {{ .Values.spec.destination.server }}
+    namespace: wordpress
+  
+  # Sync policy
+  syncPolicy:
+    {{- .Values.spec.syncPolicy | toYaml | nindent 4 }}
