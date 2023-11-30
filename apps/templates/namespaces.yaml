@@ -15,6 +15,6 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: 3ridge
+  name: app-3ridge
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
