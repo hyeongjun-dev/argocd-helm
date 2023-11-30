@@ -47,7 +47,7 @@ ingress:
   enabled: true
   className: "alb"
   annotations: {
-    alb.ingress.kubernetes.io/load-balancer-name: despread-alb-dev,
+    alb.ingress.kubernetes.io/load-balancer-name: k8s-alb-app-3ridge,
     alb.ingress.kubernetes.io/scheme: internet-facing,
     alb.ingress.kubernetes.io/target-type: ip,
     # SSL Settings
